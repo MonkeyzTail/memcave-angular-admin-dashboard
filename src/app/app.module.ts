@@ -12,6 +12,7 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { FileUploaderModule } from './shared/file-uploader/file-uploader.module';
 
 const routerConfig: ExtraOptions = {
     scrollPositionRestoration: 'enabled',
@@ -38,6 +39,7 @@ const routerConfig: ExtraOptions = {
 
         // Layout
         LayoutModule,
+        FileUploaderModule,
 
         // 3rd party modules
         MarkdownModule.forRoot({})

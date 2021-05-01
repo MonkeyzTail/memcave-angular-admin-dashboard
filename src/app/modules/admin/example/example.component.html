@@ -4,7 +4,24 @@
     <div class="flex-auto p-6 sm:p-10">
 
         <!-- CONTENT GOES HERE -->
-        <div class="h-400 min-h-400 max-h-400 border-2 border-dashed border-gray-300 rounded-2xl"></div>
+        <div class="h-400 min-h-400 max-h-400 border-2 border-dashed border-gray-300 rounded-2xl">
+            <button
+            class="ml-4"
+            mat-flat-button
+            [color]="'primary'"
+            
+            (click)="openSearchDialog()">
+            <mat-icon [svgIcon]="'heroicons_outline:plus'"></mat-icon>
+            <span class="ml-2 mr-1">Search</span>
+        </button>
+
+        <app-file-uploader
+        class="control"
+        (onFileSelect)="onFileUpload($event)"
+        [type]="dropdownTypes.profile"
+        [id]="'header-photo'"
+    ></app-file-uploader>
+        </div>
 
     </div>
 
